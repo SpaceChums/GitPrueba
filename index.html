@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Asowen Clicker Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+            background: #f0f0f0;
+        }
+        #asowen-btn {
+            font-size: 2rem;
+            padding: 20px 40px;
+            background: #4b0082;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #asowen-btn:hover {
+            background: #6a0dad;
+        }
+        #counter {
+            font-size: 2.5rem;
+            margin: 30px 0;
+            color: #4b0082;
+        }
+    </style>
 </head>
 <body>
-    <a href="">Hola</a>
-    <a href="">Prueba chida</a>
-    <a href="">Acerca de</a>
+    <h1>Asowen Clicker Simulator</h1>
+    <div id="counter">0</div>
+    <button id="asowen-btn">asowen</button>
+
+    <script>
+        let count = 0;
+        const counter = document.getElementById('counter');
+        const btn = document.getElementById('asowen-btn');
+
+        btn.addEventListener('click', () => {
+            count++;
+            counter.textContent = count;
+        });
+    </script>
 </body>
 </html>
